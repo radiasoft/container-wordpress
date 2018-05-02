@@ -13,4 +13,6 @@ build_as_root() {
     perl -pi -e 's/(?<=^ServerTokens).*/ Minimal/' /etc/apache2/conf-enabled/security.conf
     # StartServers, MaxConnectionsPerChild, etc. set in 000-default.conf.
     rm -f /etc/apache2/mods-enabled/mpm_prefork.conf
+    # This create two logs
+    rm -f /etc/apache2/conf-enabled/other-vhosts-access-log.conf
 }
