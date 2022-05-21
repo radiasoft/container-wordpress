@@ -3,7 +3,7 @@ build_image_base=wordpress:4.9.5-php7.2-apache
 build_is_public=1
 build_simply=1
 build_docker_user=$build_run_user
-build_dockerfile_aux='ENTRYPOINT []'
+build_docker_entrypoint='[]'
 
 build_as_root() {
     cd "$build_guest_conf"
